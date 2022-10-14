@@ -1,0 +1,86 @@
+@import "styles/variables.scss";
+
+.App-sidebar {
+  padding: 20px 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  @include custom-scrollbar;
+
+  .section-header {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+
+    // h3.section-title {
+    //   color: $green;
+    //   font-size: 20px;
+    //   font-weight: 600;
+    // }
+
+    .button-group {
+      background-color: #f4f4f4;
+      // height: 25px;
+      border-radius: 50px;
+      display: flex;
+      gap: 17px;
+      padding: 7px 15px;
+
+      button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        opacity: 0.4;
+
+        &.active {
+          // color: #768396;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .app-logo {
+    img {
+      height: 40px;
+      width: auto;
+      margin-bottom: 5px;
+    }
+    p {
+      font-weight: 700;
+      color: $green;
+    }
+  }
+
+  .nav-list {
+    margin-top: 170px;
+  }
+
+  .nav-item {
+    border-radius: 20px;
+    width: 55px;
+    height: 55px;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 0.2s background-color ease;
+    will-change: background-color;
+    color: #5f6388;
+
+    &.active {
+      background-color: $green;
+      color: #fff;
+      box-shadow: 0px 3px 15px rgba($green, 0.2);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: calc(55px / 3);
+    }
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+}

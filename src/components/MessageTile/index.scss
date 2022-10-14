@@ -1,0 +1,40 @@
+@import "styles/variables.scss";
+
+.message-tile {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-gap: 20px;
+  align-items: center;
+
+  &:nth-of-type(odd) {
+    --background: #fac248;
+  }
+
+  &:nth-of-type(even) {
+    --background: #eda0a8;
+  }
+
+  &__avatar {
+    display: grid;
+    place-items: center;
+    padding: 3px;
+    border: 1px solid var(--background);
+    border-radius: 50%;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      background-color: var(--background);
+    }
+  }
+
+  &__title {
+    color: $green;
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+  }
+}

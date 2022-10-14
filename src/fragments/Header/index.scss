@@ -1,0 +1,66 @@
+@import "styles/variables.scss";
+
+.App-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+  .header-search {
+    margin-left: auto;
+    background-color: $blue;
+    color: $green;
+    padding: 10px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    input {
+      all: unset;
+      font-weight: 500;
+      min-width: 250px;
+    }
+  }
+
+  .header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    .header-action {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $green;
+        border-radius: 50px;
+        font-size: 10px;
+        padding: 2px 4px;
+        transform: translate(0%, -25%);
+        color: #fff;
+        font-weight: bold;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+
+    .header-avatar {
+      width: 45px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #e7e7ff;
+      display: grid;
+      place-items: center;
+
+      img {
+        width: 65%;
+      }
+      // margin-right: 15px;
+    }
+  }
+}

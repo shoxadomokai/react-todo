@@ -1,0 +1,25 @@
+@import "styles/variables.scss";
+
+.history-section {
+  .section-header {
+    .timeframes {
+      display: flex;
+      gap: 46px;
+      font-size: 16px;
+      font-weight: 500;
+      color: $green;
+
+      .timeframe {
+        padding-bottom: 12px;
+        transition: 0.2s color ease;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+
+        &.active {
+          color: $orange;
+          border-color: $orange;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "styles/variables.scss";
+
+.dashboard-card {
+  // padding: 25px;
+  // border-radius: 16px;
+  // background-color: #fff;
+  // color: #596474;
+  min-height: 196px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f3f7fd;
+    color: #596474;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__title,
+  &__count {
+    margin-left: 20px;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  &__count {
+    margin-left: auto;
+    font-size: 26px;
+    color: #000;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid #ecf0f3;
+  }
+
+  &__footer {
+    padding-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__update {
+    text-align: right;
+    font-size: 19px;
+
+    span {
+      font-weight: bold;
+      color: #299702;
+    }
+  }
+}

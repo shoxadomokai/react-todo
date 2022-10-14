@@ -1,0 +1,74 @@
+import "./index.scss";
+import { ReactNode } from "react";
+
+interface IDashboardCard {
+  icon: () => ReactNode;
+  title: string;
+  count: number;
+  color: string;
+  increase: number;
+}
+
+export const DashboardCard = (props: IDashboardCard) => {
+  return (
+    <article className="dashboard-card card">
+      <div className="dashboard-card__header">
+        <div className="dashboard-card__icon">{props.icon()}</div>
+        <h3 className="dashboard-card__title">{props.title}</h3>
+        <p className="dashboard-card__count">
+          {String(props.count).padStart(2, "0")}
+        </p>
+      </div>
+      <hr />
+      <div className="dashboard-card__footer">
+        <svg
+          width="112"
+          height="58"
+          viewBox="0 0 112 58"
+          fill="none"
+          stroke={props.color}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.1401 38.857C15.5968 34.9049 19.549 30.8686 25.1829 30.8686C33.0031 30.8686 35.4417 42.4728 41.1597 42.4728C51.8389 42.4728 51.2503 19.7689 61.3409 19.7689C70.1702 19.7689 67.4793 25.9915 74.2905 25.9915C79.9244 25.9915 85.222 8.33295 92.2854 8.33295C98.0875 8.33295 97.9193 12.201 100.509 15.06"
+            strokeWidth="2"
+          />
+          <g filter="url(#filter0_f_5763_2751)">
+            <path
+              d="M11.1401 42.3887C15.5968 38.4366 19.549 34.4003 25.1829 34.4003C33.0031 34.4003 35.4417 46.0045 41.1597 46.0045C51.8389 46.0045 51.2503 23.3007 61.3409 23.3007C70.1702 23.3007 67.4793 29.5232 74.2905 29.5232C79.9244 29.5232 85.222 11.8647 92.2854 11.8647C98.0875 11.8647 97.9193 15.7327 100.509 18.5917"
+              strokeWidth="2"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_5763_2751"
+              x="0.476654"
+              y="0.864655"
+              width="110.774"
+              height="56.1399"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="5"
+                result="effect1_foregroundBlur_5763_2751"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <p className="dashboard-card__update">
+          <span>{String(props.increase).padStart(2, "0")}+</span> more from last
+          week.
+        </p>
+      </div>
+    </article>
+  );
+};

@@ -1,0 +1,18 @@
+@import "styles/variables.scss";
+
+.App-main {
+  padding: 20px 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  @include custom-scrollbar;
+
+  .section {
+    &.overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 30px;
+    }
+  }
+}
